@@ -11,7 +11,7 @@ library(feasts)
 library(readxl)
 library(tseries)
 library(forecast)
-BigUY <- read_excel("D:/Macro España UY/BigUY2.xlsx")
+BigUY <- read_excel("BigUY2.xlsx")
 
 
 # We convert the data to time series format
@@ -25,7 +25,7 @@ plot(uy.ts)
 ggtsdisplay(uy.ts)
 boxplot(uy.ts ~ cycle(uy.ts))
 uy.ts.desc = decompose(uy.ts)
-plot(uy.ts.desc, xlab='Año')
+plot(uy.ts.desc, xlab='AÃ±o')
 plot(log(uy.ts))
 
 # Trend Elimination
